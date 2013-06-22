@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="utf-8">
-	<meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width" />
+  <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   <title>YO! Moments</title>
@@ -12,19 +12,7 @@
   <link rel="stylesheet" href="codiqa.ext.css">
   
   <link rel="stylesheet" href="https://codiqa.com/view/472f837a/css">
-	<script src="phonegap.js" type="text/javascript" charset="utf-8"></script>
-
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
-<!-- The jQuery UI widget factory, can be omitted if jQuery UI is already included -->
-<script src="js/vendor/jquery.ui.widget.js"></script>
-<!-- The Iframe Transport is required for browsers without support for XHR file uploads -->
-<script src="js/jquery.iframe-transport.js"></script>
-<!-- The basic File Upload plugin -->
-<script src="js/jquery.fileupload.js"></script>
-
-		<script src="js/script.js" type="text/javascript" charset="utf-8"></script>
-		
-	
+  
   <!-- jQuery and jQuery Mobile -->
   <script src="https://d10ajoocuyu32n.cloudfront.net/jquery-1.9.1.min.js"></script>
   <script src="https://d10ajoocuyu32n.cloudfront.net/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script>
@@ -47,22 +35,13 @@
           <div style=" text-align:center">
               <img style="width: 214px; height: 105px" src="https://s3.amazonaws.com/assets.codiqa.com/fagI1xgQqqJiiXkTKpTQ_YM-Logo-Icon.jpg">
           </div>
-			    <!-- The fileinput-button span is used to style the file input field as button -->
-			    <span class="btn btn-success fileinput-button">
-			        <i class="icon-plus icon-white"></i>
-			        <span>Select files...</span>
-			        <!-- The file input field used as target for the file upload widget -->
-			        <input id="fileupload" type="file" name="files[]" multiple>
-			    </span>
-			    <br>
-			    <br>
-			    <!-- The global progress bar -->
-			    <div id="progress" class="progress progress-success progress-striped">
-			        <div class="bar"></div>
-			    </div>
-			    <!-- The container for the uploaded files -->
-			    <div id="files" class="files"></div>
-					
+          <div>
+              <p>
+                  <b>
+                      Events
+                  </b>
+              </p>
+          </div>
           <div class="ui-grid-a">
               <div class="ui-block-a">
               </div>
@@ -81,7 +60,7 @@
               <div class="ui-block-b">
               </div>
           </div>
-          <a data-role="button" href="#page2">
+          <a data-role="button" href="#page7">
               Create Event
           </a>
       </div>
@@ -100,44 +79,22 @@
       <div data-role="content">
           <form action="">
               <div data-role="fieldcontain">
-                  <label for="textinput1">
-                      Title
-                  </label>
-                  <input name="" id="textinput1" placeholder="" value="" type="text">
+                  <input name="" id="textinput1" placeholder="Title" value="" type="text">
               </div>
               <div data-role="fieldcontain">
-                  <label for="textarea1">
-                      Description
-                  </label>
-                  <textarea name="" id="textarea1" placeholder=""></textarea>
+                  <textarea name="" id="textarea1" placeholder="Description"></textarea>
               </div>
               <div style="width: 288px; height: 100px; position: relative; background-color: #fbfbfb; border: 1px solid #b8b8b8;">
                   <img src="http://codiqa.com/static/images/v2/image.png" alt="image" style="position: absolute; top: 50%; left: 50%; margin-left: -16px; margin-top: -18px">
               </div>
               <a data-role="button" href="#page7">
-                  Upload Headshot
+                  Upload Event Logo
               </a>
               <div data-role="fieldcontain">
-                  <label for="textinput2">
-                      Location
-                  </label>
-                  <input name="" id="textinput2" placeholder="" value="" type="text">
+                  <input name="" id="textinput2" placeholder="Location" value="" type="text">
               </div>
               <div data-role="fieldcontain">
-                  <label for="selectmenu1">
-                      Date
-                  </label>
-                  <select id="selectmenu1" name="">
-                      <option value="option1">
-                          Option 1
-                      </option>
-                  </select>
-              </div>
-              <div data-role="fieldcontain">
-                  <label for="textinput3">
-                      Event Admin
-                  </label>
-                  <input name="" id="textinput3" placeholder="" value="" type="text">
+                  <input name="" id="textinput10" placeholder="Date" value="" type="text">
               </div>
               <input type="submit" value="Save">
           </form>
@@ -145,40 +102,203 @@
   </div>
   <!-- Event -->
   <div data-role="page" id="page3">
-      <div data-role="content">
+      <div data-theme="a" data-role="header">
+          <a data-role="button" href="#page1" data-icon="arrow-l" data-iconpos="left"
+          class="ui-btn-left">
+              Home
+          </a>
+          <h3>
+              Event
+          </h3>
       </div>
-  </div>
-  <!-- Add Profile -->
-  <div data-role="page" id="page4">
       <div data-role="content">
+          <div style="width: 288px; height: 100px; position: relative; background-color: #fbfbfb; border: 1px solid #b8b8b8;">
+              <img src="http://codiqa.com/static/images/v2/image.png" alt="image" style="position: absolute; top: 50%; left: 50%; margin-left: -16px; margin-top: -18px">
+          </div>
+          <div>
+              <p>
+                  <b>
+                      Title
+                  </b>
+              </p>
+              <p>
+                  <b>
+                      Description here
+                  </b>
+              </p>
+              <p>
+                  <b>
+                      Location
+                  </b>
+              </p>
+              <p>
+                  <b>
+                      Date
+                  </b>
+              </p>
+              <p>
+                  <b>
+                      Event Admin
+                  </b>
+              </p>
+              <p>
+                  <b>
+                      <br>
+                  </b>
+              </p>
+          </div>
+          <div class="ui-grid-a">
+              <div class="ui-block-a">
+              </div>
+              <div class="ui-block-b">
+              </div>
+              <div class="ui-block-a">
+              </div>
+              <div class="ui-block-b">
+              </div>
+          </div>
+          <a data-role="button" href="#page4" data-icon="plus" data-iconpos="left">
+              Invite Participants
+          </a>
+          <a data-role="button" href="#page5">
+              Add Profile
+          </a>
+          <a data-role="button" href="#page8">
+              View Composite
+          </a>
       </div>
   </div>
   <!-- Invite -->
-  <div data-role="page" id="page5">
+  <div data-role="page" id="page4">
+      <div data-theme="a" data-role="header">
+          <a data-role="button" href="#page4" data-icon="arrow-l" data-iconpos="left"
+          class="ui-btn-left">
+              Event
+          </a>
+          <h3>
+              Add Person
+          </h3>
+      </div>
       <div data-role="content">
+          <form action="">
+              <div data-role="fieldcontain">
+                  <input name="" id="textinput4" placeholder="Email" value="" type="text">
+              </div>
+              <a data-role="button" href="#page4">
+                  Add
+              </a>
+          </form>
+          <ul data-role="listview" data-divider-theme="b" data-inset="true">
+              <li data-role="list-divider" role="heading">
+                  Divider
+              </li>
+              <li data-theme="c">
+                  <a href="#" data-transition="slide">
+                      Button
+                  </a>
+              </li>
+          </ul>
+      </div>
+  </div>
+  <!-- Add Profile -->
+  <div data-role="page" id="page5">
+      <div data-theme="a" data-role="header">
+          <h3>
+              Add Profile
+          </h3>
+      </div>
+      <div data-role="content">
+          <form action="">
+              <div style="width: 288px; height: 100px; position: relative; background-color: #fbfbfb; border: 1px solid #b8b8b8;">
+                  <img src="http://codiqa.com/static/images/v2/image.png" alt="image" style="position: absolute; top: 50%; left: 50%; margin-left: -16px; margin-top: -18px">
+              </div>
+              <a data-role="button" href="#page5">
+                  Upload Headshot
+              </a>
+              <div data-role="fieldcontain">
+                  <input name="" id="textinput5" placeholder="Name" value="" type="text">
+              </div>
+              <div data-role="fieldcontain">
+                  <input name="" id="textinput6" placeholder="Title" value="" type="text">
+              </div>
+              <div data-role="fieldcontain">
+                  <input name="" id="textinput7" placeholder="Organization" value="" type="text">
+              </div>
+              <div data-role="fieldcontain">
+                  <input name="" id="textinput8" placeholder="Email" value="" type="text">
+              </div>
+              <div data-role="fieldcontain">
+                  <input name="" id="textinput9" placeholder="Facebook" value="" type="text">
+              </div>
+              <a data-role="button" href="#page5">
+                  Button
+              </a>
+          </form>
       </div>
   </div>
   <!-- Profile -->
   <div data-role="page" id="page6">
-      <div data-role="content">
-      </div>
-  </div>
-  <!-- Create Profile -->
-  <div data-role="page" id="page2">
       <div data-theme="a" data-role="header">
-          <a data-role="button" href="#page2" class="ui-btn-left">
-              Home
+          <a data-role="button" href="#page3" class="ui-btn-left">
+              Event
           </a>
           <h3>
-              Create Event
+              Profile
           </h3>
       </div>
       <div data-role="content">
+          <div style="width: 288px; height: 100px; position: relative; background-color: #fbfbfb; border: 1px solid #b8b8b8;">
+              <img src="http://codiqa.com/static/images/v2/image.png" alt="image" style="position: absolute; top: 50%; left: 50%; margin-left: -16px; margin-top: -18px">
+          </div>
+          <div>
+              <p>
+                  <b>
+                      Name
+                  </b>
+              </p>
+              <p>
+                  <b>
+                      Title
+                  </b>
+              </p>
+              <p>
+                  <b>
+                      Organization
+                  </b>
+              </p>
+              <p>
+                  <b>
+                      Email
+                  </b>
+              </p>
+              <p>
+                  <b>
+                      Facebook
+                  </b>
+              </p>
+          </div>
+          <a data-role="button" href="#page5">
+              Edit
+          </a>
       </div>
   </div>
   <!-- Composite -->
   <div data-role="page" id="page8">
+      <div data-theme="a" data-role="header">
+          <a data-role="button" href="#page3" class="ui-btn-left">
+              Event
+          </a>
+          <h3>
+              Composite
+          </h3>
+      </div>
       <div data-role="content">
+          <div style="width: 288px; height: 400px; position: relative; background-color: #fbfbfb; border: 1px solid #b8b8b8;">
+              <img src="http://codiqa.com/static/images/v2/image.png" alt="image" style="position: absolute; top: 50%; left: 50%; margin-left: -16px; margin-top: -18px">
+          </div>
+          <a data-role="button" href="#page8">
+              Buy
+          </a>
       </div>
   </div>
 </body>
