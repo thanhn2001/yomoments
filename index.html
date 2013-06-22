@@ -1,44 +1,156 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width" />
 
+
+	
   <meta charset="utf-8">
-  <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+	<meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width" />
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <title></title>
+  <title>YO! Moments</title>
   <link rel="stylesheet" href="https://d10ajoocuyu32n.cloudfront.net/mobile/1.3.1/jquery.mobile-1.3.1.min.css">
   
   <!-- Extra Codiqa features -->
   <link rel="stylesheet" href="codiqa.ext.css">
   
-  <script src="phonegap.js" type="text/javascript" charset="utf-8"></script>
-
+  <link rel="stylesheet" href="https://codiqa.com/view/472f837a/css">
+  
   <!-- jQuery and jQuery Mobile -->
   <script src="https://d10ajoocuyu32n.cloudfront.net/jquery-1.9.1.min.js"></script>
   <script src="https://d10ajoocuyu32n.cloudfront.net/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script>
+	
+	<script src="phonegap.js" type="text/javascript" charset="utf-8"></script>
 
   <!-- Extra Codiqa features -->
   <script src="https://d10ajoocuyu32n.cloudfront.net/codiqa.ext.js"></script>
    
+  <script src="https://codiqa.com/view/472f837a/js"></script>
+  
 </head>
 <body>
-<!-- Home -->
-<div data-role="page" id="page1">
-    <div data-theme="a" data-role="header">
-        <h3>
-            YO! Moments
-        </h3>
-    </div>
-    <div data-role="content">
-        <div style="width: 288px; height: 350px; position: relative; background-color: #fbfbfb; border: 1px solid #b8b8b8;">
-            <img src="http://codiqa.com/static/images/v2/image.png" alt="image" style="position: absolute; top: 50%; left: 50%; margin-left: -16px; margin-top: -18px">
-        </div>
-        <a data-role="button" href="#page1">
-            Create Event
-        </a>
-    </div>
-</div>
+  <!-- Home -->
+  <div data-role="page" id="page1">
+      <div data-theme="a" data-role="header">
+          <h3>
+              YO! Moments
+          </h3>
+      </div>
+      <div data-role="content">
+          <div style=" text-align:center">
+              <img style="width: 214px; height: 105px" src="https://s3.amazonaws.com/assets.codiqa.com/fagI1xgQqqJiiXkTKpTQ_YM-Logo-Icon.jpg">
+          </div>
+          <div class="ui-grid-a">
+              <div class="ui-block-a">
+              </div>
+              <div class="ui-block-b">
+              </div>
+              <div class="ui-block-a">
+              </div>
+              <div class="ui-block-b">
+              </div>
+              <div class="ui-block-a">
+              </div>
+              <div class="ui-block-b">
+              </div>
+              <div class="ui-block-a">
+              </div>
+              <div class="ui-block-b">
+              </div>
+          </div>
+          <a data-role="button" href="#page1">
+              Create Event
+          </a>
+      </div>
+  </div>
+  <!-- Create Event -->
+  <div data-role="page" id="page2">
+      <div data-theme="a" data-role="header">
+          <h3>
+              Create Event
+          </h3>
+      </div>
+      <div data-role="content">
+      </div>
+  </div>
+  <!-- Event -->
+  <div data-role="page" id="page3">
+      <div data-role="content">
+      </div>
+  </div>
+  <!-- Add Profile -->
+  <div data-role="page" id="page4">
+      <div data-role="content">
+      </div>
+  </div>
+  <!-- Invite -->
+  <div data-role="page" id="page5">
+      <div data-role="content">
+      </div>
+  </div>
+  <!-- Profile -->
+  <div data-role="page" id="page6">
+      <div data-role="content">
+      </div>
+  </div>
+  <!-- Edit Profile -->
+  <div data-role="page" id="page7">
+      <div data-theme="a" data-role="header">
+          <a data-role="button" href="#page1" data-icon="arrow-l" data-iconpos="left"
+          class="ui-btn-left">
+              Home
+          </a>
+          <h3>
+              Create Event
+          </h3>
+      </div>
+      <div data-role="content">
+          <form action="">
+              <div data-role="fieldcontain">
+                  <label for="textinput1">
+                      Title
+                  </label>
+                  <input name="" id="textinput1" placeholder="" value="" type="text">
+              </div>
+              <div data-role="fieldcontain">
+                  <label for="textarea1">
+                      Description
+                  </label>
+                  <textarea name="" id="textarea1" placeholder=""></textarea>
+              </div>
+              <div style="width: 288px; height: 100px; position: relative; background-color: #fbfbfb; border: 1px solid #b8b8b8;">
+                  <img src="http://codiqa.com/static/images/v2/image.png" alt="image" style="position: absolute; top: 50%; left: 50%; margin-left: -16px; margin-top: -18px">
+              </div>
+              <div data-role="fieldcontain">
+                  <label for="textinput2">
+                      Location
+                  </label>
+                  <input name="" id="textinput2" placeholder="" value="" type="text">
+              </div>
+              <div data-role="fieldcontain">
+                  <label for="selectmenu1">
+                      Date
+                  </label>
+                  <select id="selectmenu1" name="">
+                      <option value="option1">
+                          Option 1
+                      </option>
+                  </select>
+              </div>
+              <div data-role="fieldcontain">
+                  <label for="textinput3">
+                      Event Admin
+                  </label>
+                  <input name="" id="textinput3" placeholder="" value="" type="text">
+              </div>
+              <input type="submit" value="Save">
+          </form>
+      </div>
+  </div>
+  <!-- Composite -->
+  <div data-role="page" id="page8">
+      <div data-role="content">
+      </div>
+  </div>
 </body>
 </html>
