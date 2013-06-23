@@ -220,11 +220,10 @@
               <div data-role="fieldcontain">
                   <input name="" id="textinput4" placeholder="Email" value="" type="text">
               </div>
-              <a data-role="button" href="#page4">
-                  Add
-              </a>
+              <input id="submit" type="submit" value="Invite">
+
           </form>
-          <ul data-role="listview" data-divider-theme="b" data-inset="true">
+          <!--ul data-role="listview" data-divider-theme="b" data-inset="true">
               <li data-role="list-divider" role="heading">
                   Divider
               </li>
@@ -233,7 +232,7 @@
                       Button
                   </a>
               </li>
-          </ul>
+          </ul-->
       </div>
   </div>
   <!-- Add Profile -->
@@ -275,39 +274,34 @@
           </h3>
       </div>
       <div data-role="content">
-          <div style="width: 288px; height: 100px; position: relative; background-color: #fbfbfb; border: 1px solid #b8b8b8;">
-              <img src="http://codiqa.com/static/images/v2/image.png" alt="image" style="position: absolute; top: 50%; left: 50%; margin-left: -16px; margin-top: -18px">
+          <div>
+              <img id="vp-headshoturl" src="" alt="image">
           </div>
           <div>
               <p>
                   <b>
-                      Name
+                      Name:
                   </b>
+									<span id="vp-name"></span>
               </p>
               <p>
                   <b>
-                      Title
+                      Email:
                   </b>
+									<span id="vp-email"></span>
+									
               </p>
               <p>
                   <b>
-                      Organization
+                      Facebook:
                   </b>
-              </p>
-              <p>
-                  <b>
-                      Email
-                  </b>
-              </p>
-              <p>
-                  <b>
-                      Facebook
-                  </b>
+									<span id="vp-facebook"></span>
+									
               </p>
           </div>
-          <a data-role="button" href="#page5">
+          <!-- a data-role="button" href="#page5">
               Edit
-          </a>
+          </a-->
       </div>
   </div>
   <!-- Composite -->

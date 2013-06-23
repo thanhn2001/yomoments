@@ -34,6 +34,26 @@ $(function () {
 		
 			};
 			
+			var getprofile = function(id) {
+				var Profile = Parse.Object.extend("Profile");
+			
+				var query = new Parse.Query(Profile);
+				query.get(id, {
+				  success: function(event) {
+				    // The object was retrieved successfully.
+						$('#vp-name').text(event.get('name'));
+						$('#vp-email').text(event.get('email'));
+						$('#vp-facebook').text(event.get('facebook'));
+						$('#vp-headshoturl').attr('src', event.get('headshoturl'));
+				  },
+				  error: function(object, error) {
+				    // The object was not retrieved successfully.
+				    // error is a Parse.Error with an error code and description.
+				  }
+				});
+		
+			};
+			
 		var getevents = function() {
 			var Event = Parse.Object.extend("Event");
 			
@@ -185,6 +205,16 @@ $(function () {
 			getevents();
 		});
 		
+		/*
+		$(document).delegate('#page3', 'pageshow', function() {
+			getevent();
+		});
+		
+		$(document).delegate('#page6', 'pageshow', function() {
+			getprofile();
+		});
+		*/
+		
 
 		$('#create-event').submit(function() {
 			uploadfile(createevent);
@@ -198,6 +228,10 @@ $(function () {
 	
 		$('.events').delegate('a', 'click', function() {
 			getevent($(this).attr('id'));
+		});
+		
+		$('.ve-profiles').delegate('a', 'click', function() {
+			getprofile($(this).attr('id'));
 		});
 		
 });
