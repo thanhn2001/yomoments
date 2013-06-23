@@ -4,7 +4,36 @@ Parse.initialize("RtOMiBwJs9jN3AhZsQNKKtiBbUxi5IzRyIRne1Tx", "dqgQgsXkFU1d2QrZX7
 
 $(function () {
     'use strict';
-
+		
+		var getprofiles = function() {
+				var Profile = Parse.Object.extend("Profile");
+			
+				var query = new Parse.Query(Profile);
+			
+				//query.equalTo('')
+				query.find({success:function(results) {
+						// success
+						$('.events > div').remove();
+						$.each(results, function(idx, profile) {
+							$('.ve-profiles').append(
+	              '<span>' +
+									'<a id="' + 
+									profile.id +
+									'" href="#page3"><img height="32" src="' + 
+									profile.get('headshoturl') + 
+									'"></a>' +
+	              '</span>'
+							);
+						});
+					},
+					error: function(error) {
+						// error
+						alert('Error');
+					}
+				});
+		
+			};
+			
 		var getevents = function() {
 			var Event = Parse.Object.extend("Event");
 			
@@ -13,15 +42,20 @@ $(function () {
 			//query.equalTo('')
 			query.find({success:function(results) {
 					// success
+					$('.events > div').remove();
 					$.each(results, function(idx, event) {
 						$('.events').append(
-              '<div class="ui-block">' +
+              '<div class="ui-block-a">' +
 								'<a id="' + 
 								event.id +
 								'" href="#page3"><img width="200" src="' + 
 								event.get('logourl') + 
 								'"></a>' +
-              '</div>'
+              '</div>' +
+              '<div class="ui-block-b">' +
+		              '<p><b>' + event.get('title') + '</b></p>' +
+		              '<p><span>' + event.get('location') + '</span></p>' +
+		          '</div>'
 						);
 					});
 				},
@@ -37,13 +71,15 @@ $(function () {
 			var Event = Parse.Object.extend("Event");
 			
 			var query = new Parse.Query(Event);
-			query.get("ZhvXSl23bU", {
+			query.get(id, {
 			  success: function(event) {
 			    // The object was retrieved successfully.
 					$('#ve-title').text(event.get('title'));
 					$('#ve-location').text(event.get('location'));
 					$('#ve-date').text(event.get('date'));
 					$('#ve-logourl').attr('src', event.get('logourl'));
+					
+					getprofiles();
 			  },
 			  error: function(object, error) {
 			    // The object was not retrieved successfully.
@@ -53,6 +89,8 @@ $(function () {
 		
 		};
 		
+
+			
 		var createevent = function(data) {
 			var EventObject = Parse.Object.extend("Event");
 			var newEvent = new EventObject();
