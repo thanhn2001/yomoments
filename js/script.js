@@ -135,26 +135,30 @@ $(function () {
     };
 		
 		var addprofile = function(data) {
-			var EventObject = Parse.Object.extend("Profile");
-			var newEvent = new EventObject();
+			var ProfileObject = Parse.Object.extend("Profile");
+			var newProfile = new ProfileObject();
 
-			newEvent.set("name", $('#ap-name').val());
-			newEvent.set("email", $('#ap-email').val());
-			newEvent.set("facebook", $('#ap-facebook').val());
+			newProfile.set("name", $('#ap-name').val());
+			newProfile.set("email", $('#ap-email').val());
+			newProfile.set("facebook", $('#ap-facebook').val());
 			if (data && data.url) {
-				newEvent.set("headshoturl", data.url);
+				newProfile.set("headshoturl", data.url);
 			}
-
-			newEvent.save(null, {
-				success: function(newEvent) {
+			/*
+			newProfile.save(null, {
+				success: function(newProfile) {
 					alert("Saved event");
 					file = null;
-          $.mobile.changePage("#page3");
+					//getevent('upBSZQ5Zld');
+          $.mobile.changePage("#page3-2");
 				},
 				error: function() {
 					alert("Error saving event");
 				}
-			});					
+			});		
+			*/
+      $.mobile.changePage("#page3-2");
+						
     };
 		
 		var uploadfile = function(callback) {

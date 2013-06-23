@@ -20,5 +20,11 @@ body {
 
 .events > div { text-align: center; height: 67px; overflow: hidden;}
 .event-logo-container { text-align: center;}
+.event-logo-container img { width: 100%;}
 
-body {background-color:#fff !important;}
+.ui-mobile .ui.page {background-color: #fe6c15;}
+
+body {background-color:#fe6c15 !important;}
+
+
+	

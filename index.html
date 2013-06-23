@@ -2,6 +2,8 @@
 <html>
 <head>
   <meta charset="utf-8">
+	<META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE">
+	<META HTTP-EQUIV="PRAGMA" CONTENT="NO-CACHE">
 	<meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width" />
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="orange">
@@ -44,7 +46,7 @@
       </div>
       <div data-role="content">
           <div style=" text-align:center">
-              <img style="width: 214px; height: 105px" src="https://s3.amazonaws.com/assets.codiqa.com/fagI1xgQqqJiiXkTKpTQ_YM-Logo-Icon.jpg">
+              <img style="width: 223px; height: 227px;" src="images/home.png">
           </div>
           <a data-role="button" href="#page7">
               Create Event
@@ -54,6 +56,7 @@
           </a>
       </div>
   </div>
+	<!-- Events -->
   <div data-role="page" id="page2">
       <div data-theme="a" data-role="header">
         <a data-role="button" href="#page1" data-icon="arrow-l" data-iconpos="left"
@@ -65,17 +68,18 @@
           </h3>
       </div>
       <div data-role="content">
+        <div data-role="fieldcontain" class="evs-search">
+            <input name="evs-search" id="evs-search" placeholder="Search Events" value=""
+            type="search" data-mini="true">
+        </div>
           <div class="events ui-grid-a">
           </div>
-          <a data-role="button" href="#page7">
-              Create Event
-          </a>
       </div>
   </div>
   <!-- Edit Event -->
   <div data-role="page" id="page7">
       <div data-theme="a" data-role="header">
-          <a data-role="button" href="#pages" data-icon="arrow-l" data-iconpos="left"
+          <a data-role="button" href="#page2" data-icon="arrow-l" data-iconpos="left"
           class="ui-btn-left">
 					Events
           </a>
@@ -155,6 +159,61 @@
           </a>
       </div>
   </div>
+	<div data-role="page" id="page3-2">
+	      <div data-theme="a" data-role="header" class="ui-header ui-bar-a" role="banner">
+	          <a data-role="button" href="#page2" data-icon="arrow-l" data-iconpos="left" class="ui-btn-left ui-btn ui-btn-up-a ui-shadow ui-btn-corner-all ui-btn-icon-left" data-corners="true" data-shadow="true" data-iconshadow="true" data-wrapperels="span" data-theme="a"><span class="ui-btn-inner"><span class="ui-btn-text">
+	              Events
+	          </span><span class="ui-icon ui-icon-arrow-l ui-icon-shadow">&nbsp;</span></span></a>
+	          <h3 class="ui-title" role="heading" aria-level="1">
+	              Event
+	          </h3>
+	      </div>
+	      <div data-role="content" class="ui-content" role="main">
+	          <div class="event-logo-container">
+	              <img id="ve-logourl" src="http://files.parse.com/dd2bd4a9-4e0a-4191-8ea5-25529d688725/6a849be4-f6b0-44c4-8c47-3a0c82d8f581-SWSD_web-banner3.jpg" alt="image">
+	          </div>
+	          <div>
+	              <p>
+	                  <b>
+	                      Title:
+	                  </b>
+										<span id="ve-title">Startup Weekend</span>
+	              </p>
+	              <p>
+	                  <b>
+	                      Location:
+	                  </b>
+										<span id="ve-location">Nokia Center, San Diego, CA</span>
+	              </p>
+	              <p>
+	                  <b>
+	                      Date:
+	                  </b>
+										<span id="ve-date">6/21/2013 - 6/23/2013</span>
+	              </p>
+	          </div>
+	          <div class="ve-profiles">
+	          <span><a id="r1wkQRvIMs" href="#page6"><img height="64" src="http://files.parse.com/dd2bd4a9-4e0a-4191-8ea5-25529d688725/e3350b6c-1b7f-47a8-8542-73e854538873-Joe_Bezdek.jpg"></a></span>
+						
+						<span><a id="VygoVjVQYC" href="#page6"><img height="64" src="http://files.parse.com/dd2bd4a9-4e0a-4191-8ea5-25529d688725/8448aaca-3e2e-4f5b-95e6-8915dae88af2-Sunny_B.jpg"></a></span>
+												
+						<span><a id="Cvti13zAIT" href="#page6"><img height="64" src="http://files.parse.com/dd2bd4a9-4e0a-4191-8ea5-25529d688725/f2f8c197-7c4b-47e3-b08f-032594cdf305-Shawn_Patridge.jpg"></a></span>
+					
+					</div>
+	          <a data-role="button" href="#page4" data-icon="plus" data-iconpos="left" data-corners="true" data-shadow="true" data-iconshadow="true" data-wrapperels="span" data-theme="c" class="ui-btn ui-shadow ui-btn-corner-all ui-btn-icon-left ui-btn-up-c"><span class="ui-btn-inner"><span class="ui-btn-text">
+	              Invite Participants
+	          </span><span class="ui-icon ui-icon-plus ui-icon-shadow">&nbsp;</span></span></a>
+	          <a data-role="button" href="#page5" data-corners="true" data-shadow="true" data-iconshadow="true" data-wrapperels="span" data-theme="c" class="ui-btn ui-shadow ui-btn-corner-all ui-btn-up-c"><span class="ui-btn-inner"><span class="ui-btn-text">
+	              Add Profile
+	          </span></span></a>
+	          <a data-role="button" href="#page8" data-corners="true" data-shadow="true" data-iconshadow="true" data-wrapperels="span" data-theme="c" class="ui-btn ui-shadow ui-btn-corner-all ui-btn-up-c"><span class="ui-btn-inner"><span class="ui-btn-text">
+	              View Composite
+	          </span></span></a>
+	          <a data-role="button" href="#page7" data-corners="true" data-shadow="true" data-iconshadow="true" data-wrapperels="span" data-theme="c" class="ui-btn ui-shadow ui-btn-corner-all ui-btn-up-c"><span class="ui-btn-inner"><span class="ui-btn-text">
+	              Edit Event
+	          </span></span></a>
+	      </div>
+	  </div>
   <!-- Event for Startup weekend -->
   <div data-role="page" id="page3-1">
       <div data-theme="a" data-role="header">
@@ -168,7 +227,7 @@
       </div>
       <div data-role="content">
           <div class="event-logo-container">
-              <img src="images/SWSD_web-banner3.jpg" alt="image">
+            <img id="ve-logourl" src="http://files.parse.com/dd2bd4a9-4e0a-4191-8ea5-25529d688725/6a849be4-f6b0-44c4-8c47-3a0c82d8f581-SWSD_web-banner3.jpg" alt="image">
           </div>
           <div>
               <p>
@@ -181,25 +240,22 @@
                   <b>
                       Location:
                   </b>
-									<span>Rancho Bernardo, Nokia Center</span>
+									<span id="ve-location">Nokia Center, San Diego, CA</span>
               </p>
               <p>
                   <b>
                       Date:
                   </b>
-									<span>June 21 - 23, 2013</span>
+									<span id="ve-date">6/21/2013 - 6/23/2013</span>
               </p>
           </div>
-          <div class="ui-grid-a">
-              <div class="ui-block-a">
-              </div>
-              <div class="ui-block-b">
-              </div>
-              <div class="ui-block-a">
-              </div>
-              <div class="ui-block-b">
-              </div>
-          </div>
+          <div class="ve-profiles">
+          <span><a id="r1wkQRvIMs" href="#page6"><img height="64" src="http://files.parse.com/dd2bd4a9-4e0a-4191-8ea5-25529d688725/e3350b6c-1b7f-47a8-8542-73e854538873-Joe_Bezdek.jpg"></a></span>
+					<span><a id="VygoVjVQYC" href="#page6"><img height="64" src="http://files.parse.com/dd2bd4a9-4e0a-4191-8ea5-25529d688725/8448aaca-3e2e-4f5b-95e6-8915dae88af2-Sunny_B.jpg"></a></span>
+					<span><a id="Cvti13zAIT" href="#page6"><img height="64" src="http://files.parse.com/dd2bd4a9-4e0a-4191-8ea5-25529d688725/f2f8c197-7c4b-47e3-b08f-032594cdf305-Shawn_Patridge.jpg"></a></span>
+				
+				</div>
+
           <a data-role="button" href="#page4" data-icon="plus" data-iconpos="left">
               Invite Participants
           </a>
@@ -251,20 +307,20 @@
       </div>
       <div data-role="content">
           <form id="add-profile" action="">
-              <div style="width: 288px; height: 100px; position: relative; background-color: #fbfbfb; border: 1px solid #b8b8b8;">
-                  <img src="http://codiqa.com/static/images/v2/image.png" alt="image" style="position: absolute; top: 50%; left: 50%; margin-left: -16px; margin-top: -18px">
+              <div>
+                  <img src="images/Shawn_Patridge.jpg" alt="image" >
               </div>
               <div data-role="fieldcontain">
 							    <input type="file" name="fileselect" id="ap-fileselect"></input>
 							</div>
               <div data-role="fieldcontain">
-                  <input name="" id="ap-name" placeholder="Name" value="" type="text">
+                  <input name="" id="ap-name" placeholder="Name" value="Shawn Partridge" type="text">
               </div>
               <div data-role="fieldcontain">
-                  <input name="" id="ap-email" placeholder="Email" value="" type="text">
+                  <input name="" id="ap-email" placeholder="Email" value="shawn.partridge@gmail.com" type="text">
               </div>
               <div data-role="fieldcontain">
-                  <input name="" id="ap-facebook" placeholder="Facebook" value="" type="text">
+                  <input name="" id="ap-facebook" placeholder="Facebook" value="facebook.com/shawnp" type="text">
               </div>
               <input type="submit" value="Save">
           </form>
