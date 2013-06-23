@@ -13,13 +13,13 @@ $(function () {
 				//query.equalTo('')
 				query.find({success:function(results) {
 						// success
-						$('.events > div').remove();
+						$('.ve-profiles > span').remove();
 						$.each(results, function(idx, profile) {
 							$('.ve-profiles').append(
 	              '<span>' +
 									'<a id="' + 
 									profile.id +
-									'" href="#page3"><img height="32" src="' + 
+									'" href="#page6"><img height="64" src="' + 
 									profile.get('headshoturl') + 
 									'"></a>' +
 	              '</span>'
