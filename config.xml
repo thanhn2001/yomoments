@@ -22,12 +22,15 @@
 		<gap:platform name="blackberry" project="widgets"/>
 	</gap:platforms>
 
-	<icon src="blurry.png" gap:role="default" />
+	<icon src="images/YM-Logo-with-OrangeBG.png" gap:platform="winphone" />
+	<icon src="images/YM-Logo-with-OrangeBG.png" gap:platform="winphone" gap:role="background" />
+	<icon src="images/YM-Logo-with-OrangeBG.png" gap:role="default" />
 
-    <gap:splash src="weirdo.png" />
+    <gap:splash src="images/YM-Logo-with-OrangeBG.png" />
 
 	<feature name="http://api.phonegap.com/1.0/geolocation"/>
 	<feature name="http://api.phonegap.com/1.0/network"/>
+	
 
 	<!-- sample preference specification -->
 	<!-- <preference name="autorotate" value="false" readonly="true"/> -->
