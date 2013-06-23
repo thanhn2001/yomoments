@@ -42,7 +42,7 @@
                   </b>
               </p>
           </div>
-          <div class="ui-grid-a">
+          <div class="events ui-grid-a">
               <div class="ui-block-a">
               </div>
               <div class="ui-block-b">
@@ -77,26 +77,23 @@
           </h3>
       </div>
       <div data-role="content">
-          <form action="">
+          <form id="create-event" action="">
               <div data-role="fieldcontain">
-                  <input name="" id="textinput1" placeholder="Title" value="" type="text">
+                  <input name="title" id="title" placeholder="Title" value="" type="text">
               </div>
-              <div data-role="fieldcontain">
-                  <textarea name="" id="textarea1" placeholder="Description"></textarea>
+              <div class="event-logo-container" style="width: 288px; height: 100px; position: relative; background-color: #fbfbfb; border: 1px solid #b8b8b8;">
+                  <img class="event-logo" src="http://codiqa.com/static/images/v2/image.png" alt="image" style="position: absolute; top: 50%; left: 50%; margin-left: -16px; margin-top: -18px">
               </div>
-              <div style="width: 288px; height: 100px; position: relative; background-color: #fbfbfb; border: 1px solid #b8b8b8;">
-                  <img src="http://codiqa.com/static/images/v2/image.png" alt="image" style="position: absolute; top: 50%; left: 50%; margin-left: -16px; margin-top: -18px">
-              </div>
-              <a data-role="button" href="#page7">
+              <a id="upload-button" data-role="button" href="#page7">
                   Upload Event Logo
               </a>
               <div data-role="fieldcontain">
-                  <input name="" id="textinput2" placeholder="Location" value="" type="text">
+                  <input name="location" id="location" placeholder="Location" value="" type="text">
               </div>
               <div data-role="fieldcontain">
-                  <input name="" id="textinput10" placeholder="Date" value="" type="text">
+                  <input name="date" id="date" placeholder="Date" value="" type="text">
               </div>
-              <input type="submit" value="Save">
+              <input id="submit" type="submit" value="Save">
           </form>
       </div>
   </div>
