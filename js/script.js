@@ -4,21 +4,32 @@ Parse.initialize("RtOMiBwJs9jN3AhZsQNKKtiBbUxi5IzRyIRne1Tx", "dqgQgsXkFU1d2QrZX7
 
 $(function () {
     'use strict';
+
+		var getevents = function() {
+			var Event = Parse.Object.extend("Event");
+			
+			var query = new Parse.Query(Event);
+			
+			//query.equalTo('')
+			query.find({success:function(results) {
+					// success
+					$.each(results, function(idx, event) {
+						$('.events').append(
+              '<div class="ui-block">' +
+								'<a href="#page3"><img width="200" src="' + 
+								event.get('logourl') + 
+								'"></a>' +
+              '</div>'
+						);
+					});
+				},
+				error: function(error) {
+					// error
+					alert('Error');
+				}
+			});
 		
-		// File uploads
-    var file;
-
-    // Set an event listener on the Choose File field.
-    $('#fileselect').bind("change", function(e) {
-      var files = e.target.files || e.dataTransfer.files;
-      // Our file var now holds the selected file
-      file = files[0];
-    });
-
-		$(document).delegate('#page7, #page5', 'pageshow', function() {
-			file = null;
-		}); 
-
+		};
 		
 		var createevent = function(data) {
 			var EventObject = Parse.Object.extend("Event");
@@ -69,28 +80,51 @@ $(function () {
 		var uploadfile = function(callback) {
 			if (!file) {
 				callback();
-			}
-      var serverUrl = 'https://api.parse.com/1/files/' + file.name;
+			} else {
+	      var serverUrl = 'https://api.parse.com/1/files/' + file.name;
 
-      $.ajax({
-        type: "POST",
-        beforeSend: function(request) {
-          request.setRequestHeader("X-Parse-Application-Id", 'RtOMiBwJs9jN3AhZsQNKKtiBbUxi5IzRyIRne1Tx');
-          request.setRequestHeader("X-Parse-REST-API-Key", 'x6qfuAl6Vd61NZiU5xjfyGB1f7JLlr1Yj3kJTspB');
-          request.setRequestHeader("Content-Type", file.type);
-        },
-        url: serverUrl,
-        data: file,
-        processData: false,
-        contentType: false,
-        success: callback,
-        error: function(data) {
-          var obj = jQuery.parseJSON(data);
-          alert(obj.error);
-        }
-      });
+	      $.ajax({
+	        type: "POST",
+	        beforeSend: function(request) {
+	          request.setRequestHeader("X-Parse-Application-Id", 'RtOMiBwJs9jN3AhZsQNKKtiBbUxi5IzRyIRne1Tx');
+	          request.setRequestHeader("X-Parse-REST-API-Key", 'x6qfuAl6Vd61NZiU5xjfyGB1f7JLlr1Yj3kJTspB');
+	          request.setRequestHeader("Content-Type", file.type);
+	        },
+	        url: serverUrl,
+	        data: file,
+	        processData: false,
+	        contentType: false,
+	        success: callback,
+	        error: function(data) {
+	          var obj = jQuery.parseJSON(data);
+	          alert(obj.error);
+	        }
+	      });
+			}
 		};
-				
+		
+		
+		// File uploads
+    var file;
+
+    // Set an event listener on the Choose File field.
+    $('#ce-fileselect, #ap-fileselect').bind("change", function(e) {
+      var files = e.target.files || e.dataTransfer.files;
+      // Our file var now holds the selected file
+      file = files[0];
+    });
+
+		getevents(); // on app load
+		
+		$(document).delegate('#page7, #page5', 'pageshow', function() {
+			file = null;
+		}); 
+		
+		$(document).delegate('#page1', 'pageshow', function() {
+			getevents();
+		});
+		
+
 		$('#create-event').submit(function() {
 			uploadfile(createevent);
 			return false;
