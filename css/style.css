@@ -17,3 +17,8 @@ body {
 .ng-cloak {
   display: none;
 }
+
+.events > div { text-align: center; height: 67px; overflow: hidden;}
+.event-logo-container { text-align: center;}
+
+body {background-color:#fff !important;}
