@@ -16,7 +16,9 @@ $(function () {
 					$.each(results, function(idx, event) {
 						$('.events').append(
               '<div class="ui-block">' +
-								'<a href="#page3"><img width="200" src="' + 
+								'<a id="' + 
+								event.id +
+								'" href="#page3"><img width="200" src="' + 
 								event.get('logourl') + 
 								'"></a>' +
               '</div>'
@@ -27,6 +29,26 @@ $(function () {
 					// error
 					alert('Error');
 				}
+			});
+		
+		};
+		
+		var getevent = function(id) {
+			var Event = Parse.Object.extend("Event");
+			
+			var query = new Parse.Query(Event);
+			query.get("ZhvXSl23bU", {
+			  success: function(event) {
+			    // The object was retrieved successfully.
+					$('#ve-title').text(event.get('title'));
+					$('#ve-location').text(event.get('location'));
+					$('#ve-date').text(event.get('date'));
+					$('#ve-logourl').attr('src', event.get('logourl'));
+			  },
+			  error: function(object, error) {
+			    // The object was not retrieved successfully.
+			    // error is a Parse.Error with an error code and description.
+			  }
 			});
 		
 		};
@@ -106,6 +128,7 @@ $(function () {
 		
 		// File uploads
     var file;
+		var currentEvent;
 
     // Set an event listener on the Choose File field.
     $('#ce-fileselect, #ap-fileselect').bind("change", function(e) {
@@ -133,6 +156,10 @@ $(function () {
 		$('#add-profile').submit(function() {
 			uploadfile(addprofile);
 			return false;
+		});
+	
+		$('.events').delegate('a', 'click', function() {
+			getevent($(this).attr('id'));
 		});
 		
 });
