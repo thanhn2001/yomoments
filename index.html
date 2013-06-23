@@ -11,7 +11,6 @@
   <!-- Extra Codiqa features -->
   <link rel="stylesheet" href="codiqa.ext.css">
   
-  <link rel="stylesheet" href="https://codiqa.com/view/472f837a/css">
   <link rel="stylesheet" href="css/style.css">
 	
 	<script src="phonegap.js" type="text/javascript" charset="utf-8"></script>
@@ -29,14 +28,10 @@
 
   <!-- Extra Codiqa features -->
   <script src="https://d10ajoocuyu32n.cloudfront.net/codiqa.ext.js"></script>
-   
-  <script src="https://codiqa.com/view/472f837a/js"></script>
-	
+   	
 	<script src="http://www.parsecdn.com/js/parse-1.2.8.min.js"></script>
 	
 	<script src="js/script.js"></script>
-	
- 
   
 </head>
 <body>
@@ -51,13 +46,25 @@
           <div style=" text-align:center">
               <img style="width: 214px; height: 105px" src="https://s3.amazonaws.com/assets.codiqa.com/fagI1xgQqqJiiXkTKpTQ_YM-Logo-Icon.jpg">
           </div>
-          <div>
-              <p>
-                  <b>
-                      Events
-                  </b>
-              </p>
-          </div>
+          <a data-role="button" href="#page7">
+              Create Event
+          </a>
+          <a data-role="button" href="#page2">
+              Browse Events
+          </a>
+      </div>
+  </div>
+  <div data-role="page" id="page2">
+      <div data-theme="a" data-role="header">
+        <a data-role="button" href="#page1" data-icon="arrow-l" data-iconpos="left"
+        class="ui-btn-left">
+            Home
+        </a>
+          <h3>
+              Events
+          </h3>
+      </div>
+      <div data-role="content">
           <div class="events ui-grid-a">
           </div>
           <a data-role="button" href="#page7">
@@ -68,9 +75,9 @@
   <!-- Edit Event -->
   <div data-role="page" id="page7">
       <div data-theme="a" data-role="header">
-          <a data-role="button" href="#page1" data-icon="arrow-l" data-iconpos="left"
+          <a data-role="button" href="#pages" data-icon="arrow-l" data-iconpos="left"
           class="ui-btn-left">
-              Home
+					Events
           </a>
           <h3>
               Create Event
@@ -100,9 +107,9 @@
   <!-- Event -->
   <div data-role="page" id="page3">
       <div data-theme="a" data-role="header">
-          <a data-role="button" href="#page1" data-icon="arrow-l" data-iconpos="left"
+          <a data-role="button" href="#page2" data-icon="arrow-l" data-iconpos="left"
           class="ui-btn-left">
-              Home
+              Events
           </a>
           <h3>
               Event
@@ -207,7 +214,7 @@
   <!-- Invite -->
   <div data-role="page" id="page4">
       <div data-theme="a" data-role="header">
-          <a data-role="button" href="#page4" data-icon="arrow-l" data-iconpos="left"
+          <a data-role="button" href="#page3" data-icon="arrow-l" data-iconpos="left"
           class="ui-btn-left">
               Event
           </a>
