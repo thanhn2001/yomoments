@@ -95,16 +95,16 @@
           </h3>
       </div>
       <div data-role="content">
-          <form id="create-event" action="">
+          <form id="create-event" action="" enctype="multipart/form-data" method="post">
               <div data-role="fieldcontain">
                   <input name="title" id="ce-title" placeholder="Title" value="" type="text">
               </div>
               <div class="event-logo-container" style="width: 288px; height: 100px; position: relative; background-color: #fbfbfb; border: 1px solid #b8b8b8;">
                   <img class="event-logo" src="http://codiqa.com/static/images/v2/image.png" alt="image" style="position: absolute; top: 50%; left: 50%; margin-left: -16px; margin-top: -18px">
               </div>
-              <a id="upload-button" data-role="button" href="#page7">
-                  Upload Event Logo
-              </a>
+              <div data-role="fieldcontain">
+							    <input type="file" name="fileselect" id="ce-fileselect"></input>
+							</div>
               <div data-role="fieldcontain">
                   <input name="location" id="ce-location" placeholder="Location" value="" type="text">
               </div>
@@ -279,31 +279,23 @@
           </h3>
       </div>
       <div data-role="content">
-          <form action="">
+          <form id="add-profile" action="">
               <div style="width: 288px; height: 100px; position: relative; background-color: #fbfbfb; border: 1px solid #b8b8b8;">
                   <img src="http://codiqa.com/static/images/v2/image.png" alt="image" style="position: absolute; top: 50%; left: 50%; margin-left: -16px; margin-top: -18px">
               </div>
-              <a data-role="button" href="#page5">
-                  Upload Headshot
-              </a>
               <div data-role="fieldcontain">
-                  <input name="" id="textinput5" placeholder="Name" value="" type="text">
+							    <input type="file" name="fileselect" id="ap-fileselect"></input>
+							</div>
+              <div data-role="fieldcontain">
+                  <input name="" id="ap-name" placeholder="Name" value="" type="text">
               </div>
               <div data-role="fieldcontain">
-                  <input name="" id="textinput6" placeholder="Title" value="" type="text">
+                  <input name="" id="ap-email" placeholder="Email" value="" type="text">
               </div>
               <div data-role="fieldcontain">
-                  <input name="" id="textinput7" placeholder="Organization" value="" type="text">
+                  <input name="" id="ap-facebook" placeholder="Facebook" value="" type="text">
               </div>
-              <div data-role="fieldcontain">
-                  <input name="" id="textinput8" placeholder="Email" value="" type="text">
-              </div>
-              <div data-role="fieldcontain">
-                  <input name="" id="textinput9" placeholder="Facebook" value="" type="text">
-              </div>
-              <a data-role="button" href="#page5">
-                  Button
-              </a>
+              <input type="submit" value="Save">
           </form>
       </div>
   </div>
